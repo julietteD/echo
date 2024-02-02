@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
          \App\Models\PrivacyContent::factory(1)->create();
          \App\Models\Project::factory(10)->create();
          \App\Models\User::factory(1)->create();
+         \App\Models\GeneralContent::factory(1)->create();
 
         
     }

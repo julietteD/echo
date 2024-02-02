@@ -38,6 +38,8 @@ Route::get('youngComposers', [YoungComposersController::class, 'index'])
 
 Route::get('artist', [ArtistController::class, 'index'])
 ->name('artist');
+Route::get('artists/{id}', [ArtistController::class, 'index'])->name('artist');
+
 
 Route::get('organisation', [OrganisationController::class, 'index'])
 ->name('organisation');
@@ -58,6 +60,13 @@ Route::middleware('auth')->group(function () {
     Route::get('artists/edit/{id}', [AdminController::class, 'editArtist'])->name('admin.artists.edit');
     Route::get('artists/delete/{id}', [AdminController::class, 'deleteArtist'])->name('admin.artists.delete');
     Route::post('artists/edit', [AdminController::class, 'editArtistAction'])->name('admin.artists.edit.action');
+
+
+    Route::get('projects', [AdminController::class, 'projects'])->name('admin.projects');
+    Route::get('projects/new', [AdminController::class, 'editProject'])->name('admin.projects.new');
+    Route::get('projects/edit/{id}', [AdminController::class, 'editProject'])->name('admin.projects.edit');
+    Route::get('projects/delete/{id}', [AdminController::class, 'deleteProject'])->name('admin.projects.delete');
+    Route::post('projects/edit', [AdminController::class, 'editProjectAction'])->name('admin.projects.edit.action');
 
 });
 

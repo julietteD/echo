@@ -17,8 +17,8 @@ class MemberFactory extends Factory
         return [
             'picture' => $this->faker->text($maxNbChars = 30),
             'name' => $this->faker->lastName(),
-            'locationX' => $this->faker->text($maxNbChars = 5),
-            'locationY' => $this->faker->text($maxNbChars = 5),
+            'locationX' => $this->faker->numberBetween(0, 100),
+            'locationY' => $this->faker->numberBetween(0, 100),
             'link' => $this->faker->url(),
             ];
     }

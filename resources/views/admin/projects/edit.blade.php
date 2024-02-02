@@ -28,21 +28,6 @@
 
     </div>
 </fieldset>
--------------
-<div class="mb-3">
-<label class="form-label" for="inputImage">Image:</label>
-
-
-<input
-type="file"
-name="image"
-id="inputImage"
-class="form-control @error('image') is-invalid @enderror">
-@if(!empty($artist->picture))<img style="width:40px; border: 1px solid #ccc; margin-top: 10px" src="/storage/{{ $artist->picture }}">@endif
-@error('image')
-<span class="text-danger">{{ $message }}</span>
-@enderror
-</div>
 
 <fieldset class="py-2">
     <div class="form-group">

@@ -16,12 +16,12 @@ class ProjectFactory extends Factory
     {
         return [
             'picture' => $this->faker->text($maxNbChars = 30),
-            'title' => $this->faker->lastName(),
+            'title' => $this->faker->sentence(3),
             'intro' => $this->faker->text($maxNbChars = 30),
             'titleBox1' => $this->faker->text($maxNbChars = 30),
-            'contentBox1' => $this->faker->text($maxNbChars = 30),
+            'contentBox1' => $this->faker->paragraph(5),
             'titleBox2' => $this->faker->text($maxNbChars = 30),
-            'contentBox2' => $this->faker->text($maxNbChars = 30)
+            'contentBox2' => $this->faker->paragraph(5),
        ];
     }
 }

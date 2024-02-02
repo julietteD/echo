@@ -4,7 +4,7 @@
 
 <div class="content">
  WELCOME
-
+<h1><span>P</span>rojects</h1>
  @foreach($projects as $project)
             
          

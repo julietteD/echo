@@ -1,14 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('artists') }}
+            {{ __('projects') }}
         </h2>
     </x-slot>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 <div class="py-4">
-	<a href="{{route('admin.artists.new')}}" class="btn cur-p btn-success">Nouveau</a>
+	<a href="{{route('admin.projects.new')}}" class="btn cur-p btn-success">Nouveau</a>
 </div>
 	
 	<table class="table">
@@ -21,13 +21,13 @@
 			</tr>
 		</thead>
 		<tbody>
-			@foreach($artists as $artist)
+			@foreach($projects as $project)
 				<tr>
-					<th scope="row">{{ $artist->name }}</th>
+					<th scope="row">{{ $project->title }}</th>
 					
 					<td class="mainActions">
-						<a class="action btn btn-info" href="{{ route('admin.artists.edit', ['id' => $artist->id ])}}">Edit</a>
-						<a class="action btn btn-danger delete" onclick="return warning()" href="{{ route('admin.artists.delete', [ 'id' => $artist['id']])}}">Delete</a>
+						<a class="action btn btn-info" href="{{ route('admin.projects.edit', ['id' => $project->id ])}}">Edit</a>
+						<a class="action btn btn-danger delete" onclick="return warning()" href="{{ route('admin.projects.delete', [ 'id' => $project['id']])}}">Delete</a>
 					</td>
 				</tr>
 			@endforeach

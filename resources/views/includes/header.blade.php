@@ -1,6 +1,6 @@
 <header>
 
-	
+	<img src="{{ asset('img/logo.jpg') }}" style="width:100px" />
 
 	<nav>
 		<a href="{{ route('index') }}" class="{{ request()->routeIs('index') ? 'active' : '' }}">Homepage</a>

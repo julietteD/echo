@@ -17,8 +17,8 @@ class ConcertFactory extends Factory
         return [
             'day' => $this->faker->text($maxNbChars = 10),
             'hour' => $this->faker->text($maxNbChars = 10),
-            'location' => $this->faker->text($maxNbChars = 10),
-            'artistId' => 1,
+            'location' => $this->faker->country(),
+            'artistId' => $this->faker->randomDigitNotNull(),
             'link' => $this->faker->url(),
         ];
     }

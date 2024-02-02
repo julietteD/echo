@@ -7,8 +7,8 @@
             
          
          
-            <h4>{{ $artist['name'] }}</h4>
-        
+        <h4>{{ $artist['name'] }}</h4>
+        <a href="{{ route('artist', ['id' => $artist->id ])}}">Voir le detail</a>
 
     @endforeach
 </div>
